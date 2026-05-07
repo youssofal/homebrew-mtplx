@@ -1,8 +1,8 @@
 class Mtplx < Formula
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
-  url "https://files.pythonhosted.org/packages/4d/66/058b52bad543ea9aef82069f18dae09018f5485e9f720a7290dccd8419dd/mtplx-0.2.0.tar.gz"
-  sha256 "1ce60d2b0f162121e628f4dd7c1e9e641f876b032ec5eec82e06ac0cd0964f76"
+  url "https://files.pythonhosted.org/packages/72/88/39893a3b16ab44e5df1b9c2be94ca53c57cceacb99127deed05da200676c/mtplx-0.2.1.tar.gz"
+  sha256 "8dfc884e810a2ff652ca15041b71ccaa6b78dcd1b98cede43b983636bfc1db67"
   license "Apache-2.0"
 
   depends_on "python@3.13"
