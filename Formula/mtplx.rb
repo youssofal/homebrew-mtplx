@@ -1,8 +1,10 @@
 class Mtplx < Formula
+  PYPI_SOURCE_URL = "https://files.pythonhosted.org/packages/35/10/cccb5c4c049fefecd26047bbc0e2e906b544961e447e38f33df0a211197f/mtplx-0.3.1.tar.gz".freeze
+
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
-  url "https://files.pythonhosted.org/packages/d2/69/afca3b9c3dbcc958b17c1a262c31bf8455d77a7810d3fec0b3fa6755e432/mtplx-0.3.0.tar.gz"
-  sha256 "6cb3e02f3d76f061879938026b87594babf59591d9234683bfb21545a1b3da85"
+  url PYPI_SOURCE_URL
+  sha256 "0ff3640f6bc06a5c1a7c19809e2195473a6cc3bb82cf291ab0c3301004f7565d"
   license "Apache-2.0"
 
   depends_on "python@3.13"
@@ -29,7 +31,7 @@ class Mtplx < Formula
         mkdir -p "$(dirname "$VENV")"
         "$PYTHON" -m venv "$VENV"
         "$VENV/bin/python" -m pip install --upgrade pip
-        "$VENV/bin/python" -m pip install --progress-bar on "mtplx==#{version}"
+        "$VENV/bin/python" -m pip install --progress-bar on "#{PYPI_SOURCE_URL}"
       fi
 
       exec "$VENV/bin/mtplx" "$@"
@@ -47,7 +49,7 @@ class Mtplx < Formula
 
     system python, "-m", "venv", venv
     system venv/"bin/python", "-m", "pip", "install", "--upgrade", "pip"
-    system venv/"bin/python", "-m", "pip", "install", "--progress-bar", "on", "mtplx==#{version}"
+    system venv/"bin/python", "-m", "pip", "install", "--progress-bar", "on", PYPI_SOURCE_URL
   end
 
   test do
