@@ -7,13 +7,9 @@ class Mtplx < Formula
   sha256 "033ebf61639bbab1eb0fb789dbac5a4ef52925074585968633d7d1ccd57bbcd5"
   license "Apache-2.0"
 
+  depends_on arch: :arm64
+  depends_on :macos
   depends_on "python@3.13"
-
-  on_macos do
-    on_intel do
-      odie "MTPLX requires Apple Silicon because MLX does not support Intel Mac inference."
-    end
-  end
 
   def install
     doc.install "README.md" if File.exist?("README.md")
