@@ -1,10 +1,10 @@
 class Mtplx < Formula
-  PYPI_SOURCE_URL = "https://files.pythonhosted.org/packages/1a/eb/e4ce38fc0ff3facf643c5b8cd9c27cfad221d22d772fcc876df8fb68533a/mtplx-0.3.2.tar.gz".freeze
+  PYPI_SOURCE_URL = "https://files.pythonhosted.org/packages/ab/0a/3658c4f43c14a554044a53644431088b6e7c0cbb69c83662c5990c4f8093/mtplx-0.3.3.tar.gz".freeze
 
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
   url PYPI_SOURCE_URL
-  sha256 "d938bbca88f2ac166f2e2cbf382f25fae3ded2837832a0be6b7bfc25de51f83d"
+  sha256 "033ebf61639bbab1eb0fb789dbac5a4ef52925074585968633d7d1ccd57bbcd5"
   license "Apache-2.0"
 
   depends_on "python@3.13"
