@@ -4,8 +4,9 @@ class Mtplx < Formula
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
   url SOURCE_URL
-  sha256 "8fa060d38c7e30239a1236e6dc2f6bf7bb34c3d73e109e41618aa45bbb103383"
+  sha256 "3e65d8e54ea0ba0ab87010ec7a6d2cbdcc031c7fee104b4b8c9da874da375fe0"
   license "Apache-2.0"
+  revision 1
 
   depends_on arch: :arm64
   depends_on :macos
