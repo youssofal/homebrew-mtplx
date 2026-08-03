@@ -21,7 +21,7 @@ class Mtplx < Formula
         set -euo pipefail
 
         VENV="${MTPLX_BREW_VENV:-#{var}/mtplx/venv-#{version}}"
-        PYTHON="#{Formula["python@3.13"].opt_bin}/python3.13"
+        PYTHON="#{formula_opt_bin("python@3.13")}/python3.13"
 
         if [ ! -x "$VENV/bin/#{command}" ]; then
           echo "MTPLX runtime is not installed. Bootstrapping with pip..."
@@ -38,7 +38,7 @@ class Mtplx < Formula
 
   def post_install
     venv = var/"mtplx/venv-#{version}"
-    python = Formula["python@3.13"].opt_bin/"python3.13"
+    python = formula_opt_bin("python@3.13")/"python3.13"
 
     ENV["PIP_NO_INPUT"] = "1"
     ENV["PIP_PROGRESS_BAR"] = "on"
