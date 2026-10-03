@@ -1,10 +1,10 @@
 class Mtplx < Formula
-  SOURCE_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.12.1/mtplx-2.12.1.tar.gz".freeze
+  SOURCE_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.12.2/mtplx-2.12.2.tar.gz".freeze
 
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
   url SOURCE_URL
-  sha256 "4783afb430801bb0784ae178ac00f42822f89e115ce97e5b426496c94570c157"
+  sha256 "8ee00724342de89c259a2afc5fc459ec621732c6a158ede821c8697f6a576359"
   license "Apache-2.0"
 
   depends_on arch: :arm64
