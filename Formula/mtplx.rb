@@ -1,5 +1,8 @@
 class Mtplx < Formula
   SOURCE_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.0/mtplx-2.13.0.tar.gz".freeze
+  # The prebuilt wheel for this formula's Python, with the native executor inside (macOS 14 and newer),
+  # so an install never compiles: a source build needs Xcode's newest SDK and otherwise runs without it.
+  WHEEL_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.0/mtplx-2.13.0-cp313-cp313-macosx_14_0_arm64.whl".freeze
 
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
@@ -37,7 +40,7 @@ class Mtplx < Formula
           mkdir -p "$(dirname "$VENV")"
           "$PYTHON" -m venv "$VENV"
           "$VENV/bin/python" -m pip install --upgrade pip
-          "$VENV/bin/python" -m pip install --progress-bar on "#{SOURCE_URL}"
+          "$VENV/bin/python" -m pip install --progress-bar on "#{WHEEL_URL}"
         fi
 
         exec "$VENV/bin/#{command}" "$@"
@@ -56,7 +59,7 @@ class Mtplx < Formula
 
     system python, "-m", "venv", venv
     system venv/"bin/python", "-m", "pip", "install", "--upgrade", "pip"
-    system venv/"bin/python", "-m", "pip", "install", "--progress-bar", "on", SOURCE_URL
+    system venv/"bin/python", "-m", "pip", "install", "--progress-bar", "on", WHEEL_URL
   end
 
   test do
