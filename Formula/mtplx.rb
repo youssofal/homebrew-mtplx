@@ -4,8 +4,8 @@ class Mtplx < Formula
   # so an install never compiles: a source build needs Xcode's newest SDK and otherwise runs without it.
   WHEEL_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.0/mtplx-2.13.0-cp313-cp313-macosx_14_0_arm64.whl".freeze
 
-  desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
-  homepage "https://github.com/youssofal/MTPLX"
+  desc "Run Inkling 2 Mini and Qwen 3.8 on Apple Silicon with native MTP decoding"
+  homepage "https://mtplx.com"
   url SOURCE_URL
   sha256 "f01db0bbc44dfa7eea31963d4109ee6c04204c97632957d420feb362db88ce73"
   license "Apache-2.0"
