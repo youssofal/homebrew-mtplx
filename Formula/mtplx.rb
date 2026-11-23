@@ -1,13 +1,13 @@
 class Mtplx < Formula
-  SOURCE_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.1/mtplx-2.13.1.tar.gz".freeze
+  SOURCE_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.2/mtplx-2.13.2.tar.gz".freeze
   # The prebuilt wheel for this formula's Python, with the native executor inside (macOS 14 and newer),
   # so an install never compiles: a source build needs Xcode's newest SDK and otherwise runs without it.
-  WHEEL_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.1/mtplx-2.13.1-cp313-cp313-macosx_14_0_arm64.whl".freeze
+  WHEEL_URL = "https://github.com/youssofal/MTPLX/releases/download/v2.13.2/mtplx-2.13.2-cp313-cp313-macosx_14_0_arm64.whl".freeze
 
   desc "Native MTP speculative decoding for Qwen3-Next on Apple Silicon"
   homepage "https://github.com/youssofal/MTPLX"
   url SOURCE_URL
-  sha256 "14c0eb86bf411d66a50c8e493307aeff4d177b0aa9f052acc9212f9317aba64b"
+  sha256 "c1640fa9e0309df23f6bcf29068e7b7f64a70ed021d521522cd44cb09833ad3f"
   license "Apache-2.0"
 
   depends_on arch: :arm64
